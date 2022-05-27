@@ -1,0 +1,51 @@
+.newe-profile-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.newe-profile-container menu {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1.5rem;
+}
+
+.newe-profile-container menu button {
+  border: none;
+  padding: .5rem 0;
+  background-color: transparent;
+  color: var(--letter-color);
+  font-size: 1.1rem;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.newe-profile-container .active {
+  color: var(--active-button);
+  border-bottom: 2px solid var(--active-button);
+}
+
+
+.newe-profile-container .card-newe-profile {
+  min-height: 55px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--secondary-color);
+  border: 1px solid var(--line-color);
+  border-radius: 10px;
+  padding: 1rem 0 1.5rem 0;
+}
+
+.newe-profile-container .card-newe-profile .points-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+}
+
+.newe-profile-container .card-newe-profile .add-experience-button {
+  width: 50%;
+  margin: auto;
+}
