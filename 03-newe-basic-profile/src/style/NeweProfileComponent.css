@@ -1,11 +1,15 @@
 .newe-profile-container {
   display: flex;
   flex-direction: column;
+  align-self: center;
+  min-width: 500px;
+  max-width: 57%;
   gap: 1rem;
   margin-bottom: 2rem;
 }
 
 .newe-profile-container menu {
+  width: 100%;
   display: flex;
   justify-content: flex-start;
   gap: 1.5rem;
@@ -46,6 +50,8 @@
 }
 
 .newe-profile-container .card-newe-profile .add-experience-button {
-  width: 50%;
+  width: 80%;
+  max-width: 400px;
   margin: auto;
+  padding: .5rem 1rem;
 }

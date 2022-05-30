@@ -9,7 +9,7 @@ import { saveInStorage } from './helpers/saveInStorage'
 import users from './data/users.json'
 
 import './App.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { HeaderFullDesktop } from './components/HeaderFullDesktop'
 
 
@@ -20,7 +20,14 @@ function App() {
   !localStorage.getItem("user") && saveInStorage('user', { ...users[0] })
   let userStorage = JSON.parse(localStorage.getItem('user'))
 
-  const [user, setUser] = useState(userStorage[0])
+
+  const [user, setUser] = useState(userStorage)
+
+  useEffect(() => {
+    setUser(userStorage)
+
+  }, [])
+
 
 
 
@@ -33,7 +40,7 @@ function App() {
       {/* Card de datos de perfil */}
       <PersonalDataComponent user={user} setUser={setUser} />
       {/* Card preferencias laborales */}
-      <JobPreferencesComponent user={user} />
+      <JobPreferencesComponent user={user} setUser={setUser} />
       {/* Card perfil Newe */}
       <NeweProfileComponent user={user} />
     </div>
