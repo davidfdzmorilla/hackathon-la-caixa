@@ -1,19 +1,14 @@
-# NUWE BBASIC PROFILE
+# NUWE BASIC PROFILE
 
-
-> Breve descripción del proyecto, más o menos 15 - 20 palabras: 
-
-Diseño de perfil de usuario y gestión de datos. Se ha usado localstorage para guardar datos usuario.
-
+Aplicación web desarrolldada para challenge de nuwe.io consistente en perfil de usuario. Donde se encuentran datos personales, datos laborales y puntución en retos.
 
 
 ## Installation
 
 
-
 ```shell
     # Clone or install commands
-    npm i
+    npm i [project] o npm/yarn i 
 ```
 
 ```shell
@@ -26,3 +21,4 @@ Diseño de perfil de usuario y gestión de datos. Se ha usado localstorage para 
 
 Inlcuir la licéncia y el link a esta
 [MIT](https://opensource.org/licenses/MIT)
+

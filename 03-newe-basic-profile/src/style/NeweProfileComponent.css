@@ -2,16 +2,23 @@
   display: flex;
   flex-direction: column;
   align-self: center;
-  min-width: 500px;
-  max-width: 57%;
+  justify-content: center;
+  width: 75%;
+  min-width: 375px;
+  margin: 0 1rem;
   gap: 1rem;
   margin-bottom: 2rem;
+  border-radius: 10px;
+  padding: 2rem 0;
+  border: 1px solid var(--line-color);
+  background-color: var(--secondary-color);
 }
 
 .newe-profile-container menu {
-  width: 100%;
   display: flex;
   justify-content: flex-start;
+  align-self: flex-start;
+  padding-left: 1rem;
   gap: 1.5rem;
 }
 
@@ -32,26 +39,61 @@
 
 
 .newe-profile-container .card-newe-profile {
-  min-height: 55px;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 1rem;
   background-color: var(--secondary-color);
-  border: 1px solid var(--line-color);
   border-radius: 10px;
-  padding: 1rem 0 1.5rem 0;
+  padding: 1rem 0 1.5rem;
 }
 
-.newe-profile-container .card-newe-profile .points-container {
+.newe-profile-container .card-newe-profile .radar-skills-card {
+  width: 80%;
+  border: 1px solid var(--line-color);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+
+.newe-profile-container .card-newe-profile .radar-skills-card .others-skills-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: .5rem;
 }
 
-.newe-profile-container .card-newe-profile .add-experience-button {
+.newe-profile-container .card-newe-profile .radar-skills-card .others-skills-container h3 {
+  width: 100%;
+}
+
+.newe-profile-container .card-newe-profile .radar-skills-card .others-skills-container .others-skills-card {
+  width: 26%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  padding: .5rem;
+  background-color: var(--primary-color);
+  font-size: .7rem;
+  border-radius: 5px;
+}
+
+.newe-profile-container .card-newe-profile .radar-skills-card .others-skills-container .others-skills-card svg {
+  font-size: 4rem;
+  color: var(--active-button);
+}
+
+
+
+.newe-profile-container .add-experience-button {
   width: 80%;
   max-width: 400px;
   margin: auto;
   padding: .5rem 1rem;
+  cursor: pointer;
 }

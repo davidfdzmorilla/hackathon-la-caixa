@@ -37,12 +37,14 @@ function App() {
       <Header />
       <Modal />
       <HeaderFullDesktop />
-      {/* Card de datos de perfil */}
-      <PersonalDataComponent user={user} setUser={setUser} />
-      {/* Card preferencias laborales */}
-      <JobPreferencesComponent user={user} setUser={setUser} />
-      {/* Card perfil Newe */}
-      <NeweProfileComponent user={user} />
+      <main>
+        {/* Card de datos de perfil */}
+        <PersonalDataComponent user={user} setUser={setUser} />
+        {/* Card preferencias laborales */}
+        <JobPreferencesComponent user={user} setUser={setUser} />
+        {/* Card perfil Newe */}
+        <NeweProfileComponent user={user} />
+      </main>
     </div>
   )
 }

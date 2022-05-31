@@ -3,7 +3,6 @@
   flex-direction: column;
   align-self: center;
   gap: 1rem;
-  min-width: 55%;
   border: 1px solid var(--line-color);
   background-color: var(--secondary-color);
   border-radius: 10px;

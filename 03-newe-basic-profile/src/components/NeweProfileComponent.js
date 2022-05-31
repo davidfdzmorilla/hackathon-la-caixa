@@ -1,37 +1,42 @@
 
 import { useState } from 'react';
-import { VscGraph } from 'react-icons/vsc';
+import React from 'react';
 
 import '../style/NeweProfileComponent.css'
+import { RadarHardSkills } from './RadarHardSkills';
+import { RadarSoftSkills } from './RadarSoftSkills';
+
 
 
 export const NeweProfileComponent = ({ user }) => {
 
-  const profileData = <>
-    <p>Perfil validado en Newe de {user.name}</p>
-    <div className='points-container'>
-      <VscGraph />
-      <p>#0 / 0pts</p>
-    </div>
-  </>
-
   const timeLineData = <button className='add-experience-button'>AÑADIR EXPERIENCIA</button>
 
+  const nuweProfile = <article className='card-newe-profile'>
+    {/* CARD RADAR HARD SKILLS */}
+    <RadarHardSkills />
+    {/* CARD RADAR SOFT SKILLS*/}
+    <RadarSoftSkills />
+  </article>
 
-  const [neweCardData, setNeweCardData] = useState(profileData)
-  const [type, setTyype] = useState('profile')
+
+  const [type, setType] = useState('profile')
+
+  const [card, setCard] = useState(nuweProfile)
+
 
   const handleCard = type => {
     switch (true) {
       case type === 'profile':
-        setTyype(type)
-        setNeweCardData(profileData)
+        setType(type)
+        setCard(nuweProfile)
         break;
       case type === 'timeLine':
-        setTyype(type)
-        setNeweCardData(timeLineData)
+        setType(type)
+        setCard(timeLineData)
         break;
       default:
+        setCard(nuweProfile)
         break;
     }
   }
@@ -42,9 +47,7 @@ export const NeweProfileComponent = ({ user }) => {
         <button className={type === 'profile' ? 'active' : ''} onClick={() => handleCard('profile')}>Perfil Nuwe</button>
         <button className={type === 'timeLine' ? 'active' : ''} onClick={() => handleCard('timeLine')}>Timeline CV</button>
       </menu>
-      <article className='card-newe-profile'>
-        {neweCardData}
-      </article>
+      {card}
     </section>
   )
 }
